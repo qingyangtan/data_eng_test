@@ -4,9 +4,7 @@ from datetime import datetime
 
 import os
 
-
 DIR = os.getcwd() + '/Section_1'
-
 
 dag = DAG(
     "de-pipeline-1",
