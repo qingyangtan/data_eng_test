@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 
@@ -42,9 +43,10 @@ def main(df):
     print(len(df))
     print(df.head(10))
 
-    df.to_csv('../../data/output/p_dataset.csv', index=False)
+    df.to_csv(f'{DIR}/data/output/p_dataset.csv', index=False)
 
 
 if __name__ == "__main__":
-    df = pd.read_csv('../../data/input/dataset.csv')
+    DIR = os.environ['cwd']
+    df = pd.read_csv(f'{DIR}/data/input/dataset.csv')
     main(df)

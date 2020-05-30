@@ -1,2 +1,6 @@
 .DS_Store
 .idea
+*.pyc
+Section_1/de_pipeline/airflow-webserver.pid
+Section_1/de_pipeline/logs/
+Section_1/de_pipeline/unittests.cfg
