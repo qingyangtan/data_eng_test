@@ -1,0 +1,9 @@
+FROM library/postgres
+COPY init.sql /docker-entrypoint-initdb.d/
+ENV POSTGRES_USER admin
+ENV POSTGRES_PASSWORD 1234
+ENV POSTGRES_DB main
+ENV DB_HOST=127.0.0.1
+
+# docker build --tag custom/postgres Section_2
+# docker run -p 5432:5432 -d custom/postgres:latest
